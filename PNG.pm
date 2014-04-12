@@ -155,7 +155,7 @@ An arbitrary filename for disk output.  The default output filename is C<output.
 
 =head1 AUTHOR
 
-Kasem Omary<< <kasemo@gmail.com> >> 
+Kasem Omary<< <kasemo@cpan.org> >> 
 
 =head1 SOURCE REPOSITORY
 
