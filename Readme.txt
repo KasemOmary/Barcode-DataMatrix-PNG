@@ -20,4 +20,6 @@ When I say this thing is very rough - I'm talking bout jagged edges & disgusting
 Big thanks go out to: 
 - Mark A. Stratman - For the work done on HTML::Barcode::DataMatrix + Barcode::DataMatrix.  The HTML version inspired me to step it up a notch.
 
-- KasemO, 4/9/2014
+- Pete & Paul @ UPS - For kicking my butt & giving me access to some equipment to test my work.  Thanks guys, I appreciate the help and I'll keep up the bad work.
+
+- KasemO, 4/12/2014
