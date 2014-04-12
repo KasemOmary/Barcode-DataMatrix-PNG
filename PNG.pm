@@ -6,6 +6,8 @@ use GD;
 use Moose;
 use Barcode::DataMatrix;
 
+our $VERSION = '0.02';
+
 has 'barcode', is=>'rw', default=>"";
 has 'data', is=>'rw', default=>"";
 has 'resolution', is=>'rw', default=>3;
@@ -14,13 +16,15 @@ has 'filename', is=>'rw', default=>'output.png';
 
 =head1 NAME
 
-Barcode::DataMatrix - Generate data for Data Matrix barcodes
+Barcode::DataMatrix::PNG - Generate PNG graphical representations of Data Matrix barcodes
 
 =head1 SYNOPSIS
 
     use Barcode::DataMatrix::PNG;
-    my $data = Barcode::DataMatrix::PNG->new->(barcode=>'test_barcode',size=>'3');
-	my $image = $data->render();
+    my $data = Barcode::DataMatrix::PNG->new->(barcode=>'test_barcode');
+	$bleh->encode();
+	$data->render();
+
 =cut
 
 =head1 DESCRIPTION
@@ -32,15 +36,15 @@ Potential applications include graphically oriented documents such as PDF, print
 
 =head2 new (%attributes)
 
-
+Minimal initiation of a barcode object is new(barcode=>"yourtext").  Options may be added via the C<%attributes> in any order.  Default settings of web output (with header) and a resolution of 3 pixels will be used unless changed.
 
 =cut
 
 =head2 render ()
 
-Render a PNG image of the created barcode.
+Render a PNG image of the created barcode.  The graphic will be rendered based on settings selected.
 
-This can throw an exception if it's unable to generate the barcode data.
+An exception may be thrown by foundation classes if they are unable to generate the barcode data or graphics.
 
 =cut
 
@@ -132,9 +136,19 @@ sub echo_matrix {
 
 =head2 barcode
 
+Ascii string data to be inserted into the barcode. 
 
+=head2 resolution
 
-=head2 length
+The resolution (in pixels) of the barcode to be generated.   The default setting is C<3> pixels resolution.
+
+=head2 target
+
+C<web> or C<file> - Web output includes a standard header for the PNG format, file outputs to <filename>.   Default output is C<web>
+
+=head2 filename
+
+An arbitrary filename for disk output.  The default output filename is C<output.png>.
 
 
 =cut
