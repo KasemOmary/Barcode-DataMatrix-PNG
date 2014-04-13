@@ -11,7 +11,8 @@ Got it all spit-shined & good for primetime.  Tested, works nice, looks great & 
 ~ Kasem Omary 
 
 4/9/2014  - v0.01 -	1st Public Release
-4/12/2014 - v0.02 - 	PNG.pm released
+4/12/2014 - v0.02 - 	PNG.pm released , Github 
+4/13/2014 - v0.03 - 	Cleaned-up verison.
 
 
 
