@@ -7,10 +7,10 @@ use Moose;
 use Barcode::DataMatrix;
 use Carp;
 
-our $VERSION = '0.02';
+our $VERSION = '0.04';
 
-has 'barcode', is=>'rw', default=>"";
-has 'data', is=>'rw', default=>"";
+has 'barcode', is=>'rw', default=>undef;
+has 'data', is=>'rw', default=>undef;
 has 'resolution', is=>'rw', default=>3;
 has 'target', is=>'rw', default=>'stdout';
 
@@ -75,6 +75,10 @@ Echo a human-readable representation of the barcode data stored in $this->{"barc
 
 sub encode { 
 	my $self = shift;
+
+	unless (defined $self->barcode) {
+		croak("Barcode::DataMatrix::PNG : Barcode data string \$PNGobj->barcode is undefined.  Barcode contains no data.  Set \$PNGobj->barcode prior to \$PNGobj->encode().");
+	}
 	$self->data(new Barcode::DataMatrix->barcode($self->barcode));
 }
 
@@ -83,7 +87,7 @@ sub render {
 	my $self = shift;
 
 	unless (defined $self->data) {
-		croak("Data is undefined, barcode must encode() prior to render().");
+		croak("Barcode::DataMatrix::PNG : Barcode matrix data \$PNGobj->data is undefined, barcode must \$PNGobj->encode() prior to \$PNGobj->render().");
 	}
 
 	my $dimension = @{$self->data->[0]}; # Width of image
