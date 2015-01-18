@@ -155,7 +155,7 @@ Default output is C<stdout>.  Options are C<stdout> or C<pass>.  Pass will C<ret
 
 =head1 AUTHOR
 
-Kasem Omary<< <kasemo@gmail.com> >> 
+Kasem Omary<< <kasemo@cpan.org> >> 
 
 =head1 SOURCE REPOSITORY
 
