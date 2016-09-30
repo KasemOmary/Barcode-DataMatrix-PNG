@@ -18,4 +18,4 @@ requires:
   Carp: 0
   GD: 0
   Moose: 0
-version: 0.04
+version: 0.05
