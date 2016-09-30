@@ -10,13 +10,11 @@ Got it all spit-shined & good for primetime.  Tested, works nice, looks great & 
 
 ~ Kasem Omary
 
-4/9/2014  - v0.01 -	1st Public Release
+4/9/2014  - v0.01 - 	1st Public Release
 4/12/2014 - v0.02 - 	PNG.pm released , Github
 4/13/2014 - v0.03 - 	Cleaned-up verison.
 4/13/2014 - v0.04 - 	Update ; Fixes ; Improvements .
-9/30/2016 - v0.05 -		Add support for Barcode::DataMatrix v0.09 'size' attribute, and rendering rectangle barcodes <petercj@cpan.org>
-
-
+9/30/2016 - v0.05 - 	Add support for Barcode::DataMatrix v0.09 'size' attribute, and rendering rectangle barcodes <petercj@cpan.org>
 
 Big thanks go out to:
 - Mark A. Stratman - For the work done on HTML::Barcode::DataMatrix + Barcode::DataMatrix.  The HTML version inspired me to step it up a notch.
